@@ -77,8 +77,14 @@
 <p class="signupText">prepti.me is the best way to manage your debate tournament, because your tab suite shouldn't control you.<br><br>We're excited to share it with you soon. Sign up for updates.</p>
 <br>
 <div class="input-append">
-  <input class="input-large" id="appendedInputButton" type="text" placeholder="you@email.com">
-  <button class="btn btn-defualt" type="button">Sign Up!</button>
+  <%= form_for @prospectiveuser do |f| %>
+
+    <%= f.text_field(:email, :class => "input-large", :id => "appendedInputButton", 
+          :placeholder => "you@email.com") %>
+    <%= f.submit "Sign Up!", :class => "btn btn-default" %>
+
+  <% end %>
+
 </div>
 
 

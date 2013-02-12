@@ -1,6 +1,8 @@
 PreptimeLandingpage::Application.routes.draw do
 
   root :to => 'staticpages#show'
+  resources :pusers
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -8,7 +8,17 @@
 </head>
 <body>
 
+<div class="container">
+	<% if flash[:notice] %>
+		<div class="alert alert-info">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<%= content_tag(:div, flash.now[:notice], :id => "flash-error") %>
+		</div>
+	<% end %>
+
+
 <%= yield %>
+</div>
 
 </body>
 </html>
